@@ -27,13 +27,15 @@ cd libsodium*
 
 sudo make && sudo make install
 
+sudo chmod 777 /etc/ld.so.conf.d/usr_local_lib.conf
+
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 
 ldconfig
 
 
 
-#要在java环境中
+#自行配置java环境，网上一大把
 
 java -jar Ssr.jar
 
