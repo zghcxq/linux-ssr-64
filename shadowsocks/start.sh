@@ -7,7 +7,7 @@ sudo chmod 777 /etc/shadowsocks.json
  
 sudo apt-get install build-essential
 
-
+sudo rm -rf libsodium*
 
 wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
 tar zxf LATEST.tar.gz
