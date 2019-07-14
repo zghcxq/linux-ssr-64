@@ -3,14 +3,12 @@
 
 git clone https://github.com/zghcxq/Ssrbylinux.git
 
-#进入 Ssrbylinux/shadowsocks/ 目录
+#进入 Ssrbylinux/
 
-cd Ssrbylinux/shadowsocks/
+cd Ssrbylinux/
 
 
-#进行初始化
 
-./start.sh
 
 
 安装混淆依赖 
@@ -35,14 +33,15 @@ ldconfig
 
 
 
-#自行配置java环境，网上一大把
+#进行初始化
 
-java -jar Ssr.jar
+python3 main.py
+
+choice 5 
 
 
-#注意：添加节点失败，重启软件即可
 
 
 
 # Ssrbylinux
-# Ssrclient
+
