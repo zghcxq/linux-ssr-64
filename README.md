@@ -1,7 +1,7 @@
 
 
 
-git clone https://github.com/zghcxq/Ssrbylinux.git
+https://github.com/zghcxq/linux-ssr-64.git
 
 #进入 Ssrbylinux/
 
@@ -35,13 +35,12 @@ ldconfig
 
 #进行初始化
 
-python3 main.py
-
-choice 5 
+python3 main.py -i
 
 
 
 
 
-# Ssrbylinux
 
+
+# linux-ssr-64

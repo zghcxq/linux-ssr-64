@@ -40,10 +40,11 @@ def decode_ss(ss):
 
 def decode_ssr(ssr):
     first_b = base64decode(ssr[6:])
-    ssr_conf = {'server': '', 'server_port': ''}
+    
     print(first_b.decode())
     config, remarks,group = configcreat.Analyze(first_b.decode())
     reslt = json.dumps(config)
+    
     employee_file = open("config/shadowsocks.json","r")
    
     solvethesign = len(employee_file.read())

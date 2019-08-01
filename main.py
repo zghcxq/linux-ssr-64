@@ -1,23 +1,26 @@
 import dealssrlink
 import os
 
+import sys
+def help():
+		print ("SSR-script version 1.0.1  ( author:dawn)")
+		print("usage: python3 main.py -h  [help]")
+		print("usage: python3 main.py -S  [SSRNode]")
+		print("usage: python3 main.py -l  [list of ssrNode]")
+		print("usage: python3 main.py -r  [run]")
+		print("usage: python3 main.py -s  [stop]")
+		print("usage: python3 main.py- i  [install SSR]")
+
 def main():
-	while 1 :	    
-		print ("                                         ")
-		print ("|---------------------------------------|")
-		print ("|        ssr-script                     |")
-		print ("|        author:dawn                    |")
-		print ("|---------------------------------------|")
-		print ("| 1. inputssrlink                       |")
-		print ("| 2.choosessrnode                       |")
-		print ("| 3.run service                         |")
-		print ("| 4.stop service                        |")
-		print ("| 5.init  software                      |")
-		print ("|---------------------------------------|")
+
 			
-		num = int (input("please enter a number(represent quit is zero)  : "))
+	if len(sys.argv)==1:	
+		help()
 	
-		if num == 1:
+	elif len(sys.argv)==2:
+		if sys.argv[1] == "-h":
+			help()
+		if sys.argv[1] == "-S":
 			s = input("please enter ssr node : ")
 			is_ss = s.find('ss://')
 			is_ssr = s.find('ssr://')
@@ -26,10 +29,12 @@ def main():
 				dealssrlink.decode_ss(ss)
 			elif is_ssr != -1:
 				ssr = s[is_ssr:].strip()
+				
 				dealssrlink.decode_ssr(ssr)
 			else:
 				print("ssr node is worse !!!")
-		elif num == 2:
+
+		if sys.argv[1] == "-l":
 			employee_file = open("config/shadowsocks.json", "r") 
  
 			for employee in employee_file.readlines():
@@ -67,16 +72,15 @@ def main():
 
 
 	
-		elif num == 3:
+		if sys.argv[1] == "-r":
 			os.system("bash runandstop.sh 1")
  
-		elif num == 4:
+		if sys.argv[1] == "-s":
 			os.system("bash runandstop.sh 2")
-		elif num == 5:
+		if sys.argv[1] == "-i":
 			os.system("bash init.sh")
 
-		elif num == 0:
-			break;
+
 
 main()
 
