@@ -3,9 +3,9 @@
 
 https://github.com/zghcxq/linux-ssr-64.git
 
-#进入 Ssrbylinux/
+#进入 linux-ssr-64/
 
-cd Ssrbylinux/
+cd linux-ssr-64/
 
 
 
